@@ -59,20 +59,21 @@ difference = date2 - date1
 print(f"Difference between dates: {difference.days} days")
 
 
-# Timezones (requires pytz library)
+# Timezones (using zoneinfo, standard library in Python 3.9+)
 try:
-    import pytz
+    from zoneinfo import ZoneInfo
 
     # Get the current time in a specific timezone
-    ny_timezone = pytz.timezone("America/New_York")
+    ny_timezone = ZoneInfo("America/New_York")
     ny_time = datetime.datetime.now(ny_timezone)
     print(f"New York time: {ny_time.strftime('%Y-%m-%d %H:%M:%S %Z%z')}")
 
     # Convert a naive datetime to an aware datetime
     naive_dt = datetime.datetime.now()
-    aware_dt = ny_timezone.localize(naive_dt)
+    aware_dt = naive_dt.astimezone(ny_timezone)
     print(f"Aware datetime in New York: {aware_dt.strftime('%Y-%m-%d %H:%M:%S %Z%z')}")
 
 except ImportError:
-    print("\n'pytz' library not installed. To run the timezone examples, run: pip install pytz")
+    print("\n'zoneinfo' is not available (requires Python 3.9+).")
+
 
