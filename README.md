@@ -1,319 +1,171 @@
-README.md
-=========
-
-Additional setup
-----------------
-
-Python environment setup
-------------------------
-
-- **Make install:** run `make install` to create a virtual environment in `.venv` and install `requirements.txt` if present. For Windows, run `make install-windows`.
-- **Unix script:** `env_setup.sh` — creates `.venv` and installs requirements. Run: `bash env_setup.sh`.
-- **Windows scripts:** `env_setup.bat` and `env_setup.ps1` — run the appropriate script in Command Prompt or PowerShell.
-- **VS Code on Windows:** See [WINDOWS_VSCODE_SETUP.md](WINDOWS_VSCODE_SETUP.md) for step-by-step instructions to configure the interpreter and workspace settings.
-# Python
-Learning Python 
-# Python Learning — Consolidated Notes
-
-## Table of contents
-- Introduction
-- Python Basics — Overview
-- OOP in Python
-- Complete Syllabus
-- Windows VS Code setup
-- Pips & Modules
-- Python Data Structures
-- Comments, Escape Sequences, Print, Input, and Variables
-
----
-
-## Introduction to Python
-
-**Python** is a high-level, interpreted, general-purpose programming language known for its readable syntax and strong community. Created by Guido van Rossum and first released in 1991, Python emphasizes code readability and developer productivity, making it a great choice for beginners and professionals alike.
-
----
-
-## Key features
-
-- Readable & concise syntax — code is easy to understand and maintain
-- Interpreted & cross-platform — runs on Windows, macOS, Linux
-- Dynamic typing and automatic memory management
-- Batteries-included standard library for many common tasks
-- Vast ecosystem of third-party packages (PyPI) for web, data, ML, automation
-
-## Where Python is used
-
-- Web development (Django, Flask)
-- Data science & machine learning (NumPy, pandas, scikit-learn, TensorFlow)
-- Scripting & automation, DevOps
-- Education, prototyping, and scientific computing
-
-## Basic syntax — quick example
-
-```python
-# hello.py
-def greet(name):
-    return f"Hello, {name}!"
-
-if __name__ == "__main__":
-    print(greet("World"))
-```
-
-Run the example with:
-
-```bash
-python hello.py
-```
-
----
-
-## Python Basics — Overview
-
-This file summarizes core Python fundamentals and study checkpoints.
-
-- Syntax & style: indentation, PEP8 basics
-- Data types: `int`, `float`, `str`, `bool`, `None`
-- Variables & naming conventions
-- Operators: arithmetic, comparison, logical, membership, identity
-- Control structures: `if`/`else`, `for`, `while`, `break`, `continue`
-- Functions: definition, return, arguments, `*args`/`**kwargs`, lambdas
-- Data structures: lists, tuples, sets, dicts — methods and use-cases
-- Comprehensions: list/dict/set comprehensions and generator expressions
-- Modules & packages: `import`, `from ... import`, package layout
-- File I/O: reading/writing, CSV basics, `with` keyword
-- Exceptions: `try`/`except`, creating custom exceptions
-- Iterators & generators: iterator protocol, `yield`
-- Useful stdlib modules: `os`, `sys`, `pathlib`, `datetime`, `json`, `re`, `collections`
-
-Exercises:
-- Print and format strings, f-strings
-- Implement simple functions (factorial, fibonacci)
-- Manipulate lists and dictionaries
-- Read/write a text file and parse lines
-
----
-
-## OOP in Python — Methods, Patterns, and Examples
-
-Core concepts:
-- Classes and instances
-- Encapsulation (private/protected conventions)
-- Inheritance (single, multiple) and MRO
-- Polymorphism and duck typing
-- Abstraction and interfaces (`abc`)
-
-Important method types and special methods:
-- `__init__(self, ...)` — constructor
-- `__new__(cls, ...)` — instance creation
-- `__repr__(self)` / `__str__(self)` — readable representations
-- Comparison: `__eq__`, `__lt__`, `__le__`, etc.
-- Numeric ops: `__add__`, `__sub__`, `__mul__`, ...
-- Container protocol: `__len__`, `__contains__`, `__iter__`, `__getitem__`, `__setitem__`
-- Context manager: `__enter__`, `__exit__`
-- Callable objects: `__call__`
-
-Decorators and attribute helpers:
-- `@classmethod` — method receives class `cls`
-- `@staticmethod` — no implicit first argument
-- `@property` — attribute access via methods
-- Descriptors for advanced attribute control
-
-Design guidance:
-- Prefer composition over inheritance for many cases
-- Keep methods small and single-responsibility
-- Use ABCs for clear interfaces when needed
-
-Example usage patterns and exercises:
-- Implement a `Person` / `Employee` hierarchy with properties
-- Create a custom container implementing iteration and indexing
-- Write a context-manager class for resource handling
-
----
-
-## Python Learning - Complete Syllabus
-
-This syllabus covers Python basics through core OOP topics and practical examples. Use it as a checklist while studying.
-
-1. Getting Started
-   - Installation, interpreters, REPL, virtual environments
-   - Running scripts, shebang, basic tooling
-
-2. Python Basics
-   - Syntax, comments, indentation
-   - Data types: numbers, strings, booleans, None
-   - Variables and assignments
-   - Operators: arithmetic, comparison, logical, bitwise
-
-3. Control Flow
-   - `if`, `elif`, `else`
-   - Loops: `for`, `while`, `break`, `continue`, `else` on loops
-   - Comprehensions: list, dict, set, generator
-
-4. Functions
-   - Defining functions, return values
-   - Positional, keyword, default args
-   - `*args`, `**kwargs`
-   - Lambda, higher-order functions, closures
-   - Decorators
-
-5. Data Structures
-   - Lists, tuples, sets, dictionaries
-   - Common methods, slicing, iteration
-   - Collections module basics (`deque`, `Counter`, `defaultdict`, `namedtuple`)
-
-6. Modules & Packages
-   - Importing, package structure, `__init__.py`
-   - `pip`, `venv`, `requirements.txt`
-
-7. File I/O
-   - `open()`, reading/writing files, context managers
+# Python Learning Journey
 
-8. Error Handling & Testing
-   - Exceptions (`try`, `except`, `finally`, `else`)
-   - Creating custom exceptions
-   - Unit testing with `unittest`/`pytest`
+A repository to document the journey of learning Python.
 
-9. Iterators & Generators
-   - Iterator protocol, `__iter__`, `__next__`
-   - Generators with `yield`, generator expressions
+This `README.md` file provides a structured overview of the Python learning materials available in this repository. The learning modules are organized into subdirectories within the `Python_Learning` directory.
 
-10. Concurrency & Async
-   - Threads vs processes
-   - `asyncio` basics, `async`/`await`
+## Table of Contents
 
-11. Standard Library Highlights
-   - `os`, `sys`, `pathlib`, `datetime`, `json`, `re`, `logging`, `subprocess`
+1.  [Introduction to Python](./Python_Learning/001-Intro/Python_Intro.md)
+2.  [Pips and Modules](./Python_Learning/002-Pips&Modules/Pips&Modules.md)
+3.  [Data Structures](./Python_Learning/003-DataSt/DS.md)
+4.  [Comments, Escape Sequences, and Input](./Python_Learning/004-Com_EscSeq_Input/All.md)
+5.  [Type Casting](./Python_Learning/005-TypeCasting/Casting.md)
+6.  [Conditional Statements (IF-ELSE)](./Python_Learning/006-IF-ELSE/if-else.md)
+7.  [Loops](./Python_Learning/007-LOOPS/Loops.md)
+8.  [Range](./Python_Learning/008-Range/range.md)
+9.  [Continue and Break](./Python_Learning/009-Conti&Break/Conti&Br.md)
+10. [Error Handling (Try-Except)](./Python_Learning/010-TRY_Except/TryExcept.md)
+11. [Operators](./Python_Learning/011-Operator/OP.md)
+12. [Lists](./Python_Learning/012-List/List.md)
+13. [Tuples](./Python_Learning/013-Tuples/Tuple.md)
+14. [Sets](./Python_Learning/014-Sets/Set.md)
+15. [Match Statement](./Python_Learning/015-Match/Match.md)
+16. [Dictionaries](./Python_Learning/016-Dictionaries/Dics.md)
+17. [Date and Time](./Python_Learning/017-Date/Date.md)
+18. [Modules](./Python_Learning/018-Modules/Module.md)
+19. [Pass Statement](./Python_Learning/019-Pass/Pass.md)
 
-12. Advanced Topics (overview)
-   - Context managers, descriptors, metaclasses
-   - Packaging and distribution
-   - Type hints and `mypy`
+## Learning Modules
 
-13. OOP (Object-Oriented Programming)
-   - Classes and instances
-   - Attributes and methods
-   - Encapsulation, inheritance, polymorphism, abstraction
-   - Special / magic methods (dunder methods)
-   - `@classmethod`, `@staticmethod`, `@property`
-   - Multiple inheritance and MRO
-   - Abstract Base Classes (`abc`)
+### 1. Introduction to Python
 
-14. Practical Projects & Exercises
-   - CLI tools, small web scrapers, simple web app, data parsing
-   - Project structure, tests, CI basics
+This module covers the basics of Python, including an introduction to the language, Object-Oriented Programming (OOP), and the basic syntax.
 
-Suggested study flow: start with sections 1–5, then 6–9, follow with OOP (13), and finish with advanced topics and projects.
+- **Notes:**
+    - [Python Introduction](./Python_Learning/001-Intro/Python_Intro.md)
+    - [Basics](./Python_Learning/001-Intro/BASICS.md)
+    - [Object-Oriented Programming](./Python_Learning/001-Intro/OOP.md)
+    - [Syllabus](./Python_Learning/001-Intro/SYLLABUS.md)
+- **Code:**
+    - [Python Intro Example](./Python_Learning/001-Intro/Python_Intro.py)
+    - [Basics Example](./Python_Learning/001-Intro/basics_example.py)
+    - [OOP Example](./Python_Learning/001-Intro/oop_example.py)
 
----
+### 2. Pips and Modules
 
-## Windows — VS Code Python setup
+This module explains how to use `pip` for package management and how to create and use modules in Python.
 
-1. Install Python for Windows from https://python.org and check "Add Python to PATH".
-2. Install Visual Studio Code: https://code.visualstudio.com/
-3. In VS Code, install the **Python** extension (ms-python.python).
-4. Open this repository folder in VS Code.
-5. Create the virtual environment:
-   - Run `env_setup.ps1` in PowerShell or `env_setup.bat` in Command Prompt.
-6. Select interpreter: press `Ctrl+Shift+P` → `Python: Select Interpreter` → choose `.venv\Scripts\python.exe`.
-7. Recommended (workspace) settings: create `.vscode/settings.json` with the recommended python path and activation.
-8. If using PowerShell, you may need to allow running the activation script: run PowerShell as Admin and set `Set-ExecutionPolicy -ExecutionPolicy RemoteSigned -Scope CurrentUser`.
+- **Notes:** [Pips & Modules](./Python_Learning/002-Pips&Modules/Pips&Modules.md)
+- **Code:** [Pips & Modules Example](./Python_Learning/002-Pips&Modules/Pips&Modules.py)
+- **Package:** [mypkg](./Python_Learning/002-Pips&Modules/mypkg/)
 
-See `env_setup.ps1` and `env_setup.bat` for automated steps.
+### 3. Data Structures
 
----
+This module introduces fundamental Python data structures.
 
-## Pips & Modules — Notes and Examples
+- **Notes:** [Data Structures](./Python_Learning/003-DataSt/DS.md)
+- **Code:** [Data Structures Example](./Python_Learning/003-DataSt/DS.py)
 
-This document covers the essential topics for working with Python packages and modules and using `pip` and virtual environments. It includes commands, concepts, and runnable examples in `Pips&Modules.py` and the example package `mypkg`.
+### 4. Comments, Escape Sequences, and Input
 
-Topics to Learn
+This module covers how to write comments, use escape sequences for special characters, and get user input.
 
-- `pip` basics: install, uninstall, list, show, search
-- Virtual environments: `venv`, `virtualenv`, `pipenv`, `poetry`
-- Requirements management: `requirements.txt`, `pip freeze` and `pip install -r`
-- Creating modules & packages: `.py` modules, `__init__.py`, package structure, relative vs absolute imports
-- Editable installs & development workflows: `pip install -e .`, `pyproject.toml`, `setup.cfg`
-- Publishing: building wheels, `twine upload` (high level)
-- Dependency tools: `pipx`, `venv`, `pip-tools`, `poetry` basics
-- Security & reproducibility: pinning versions, hashes, virtual env per-project
+- **Notes:** [Comments, Escape Sequences, and Input](./Python_Learning/004-Com_EscSeq_Input/All.md)
+- **Code:** [Examples](./Python_Learning/004-Com_EscSeq_Input/All.py)
 
-Common pip & venv Commands (examples included in original notes)
+### 5. Type Casting
 
-See `Pips&Modules.py` and `mypkg` in the repository for runnable examples.
+This module explains how to convert variables from one data type to another.
 
----
+- **Notes:** [Type Casting](./Python_Learning/005-TypeCasting/Casting.md)
+- **Code:** [Type Casting Example](./Python_Learning/005-TypeCasting/Typecasting.py)
 
-## Python Data Structures — Notes
+### 6. Conditional Statements (IF-ELSE)
 
-Built-in structures
+This module covers the use of `if`, `elif`, and `else` to control the flow of execution based on conditions.
 
-- List (`list`): ordered, mutable sequence. Good for indexed access and ordered collections.
-  - Common ops: append, extend, insert, pop, remove, slicing, iteration.
-  - Complexity: indexing O(1), append amortized O(1), insert/delete O(n).
+- **Notes:** [If-Else](./Python_Learning/006-IF-ELSE/if-else.md)
+- **Code:** [If-Else Example](./Python_Learning/006-IF-ELSE/if-else.py)
 
-- Tuple (`tuple`): ordered, immutable sequence. Use for fixed collections and keys in dicts.
-  - Common ops: indexing, unpacking, iteration.
-  - Complexity: similar to `list` for read access, but immutable.
+### 7. Loops
 
-- Set (`set`) and `frozenset`: unordered collections of unique elements.
-  - Common ops: add, remove, membership test, set operations (union, intersection, difference).
-  - Complexity: average O(1) for membership/add/remove.
+This module introduces `for` and `while` loops for iterating over sequences and executing code repeatedly.
 
-- Dictionary (`dict`): mapping of keys to values. Ordered (insertion order) since Python 3.7.
-  - Common ops: get, set, pop, keys/values/items, iteration.
-  - Complexity: average O(1) for lookup/insert/delete.
+- **Notes:** [Loops](./Python_Learning/007-LOOPS/Loops.md)
+- **Code:** [Loops Example](./Python_Learning/007-LOOPS/Loops.py)
 
-- String (`str`): immutable sequence of Unicode characters. Supports slicing, formatting.
+### 8. Range
 
-- Bytes/Bytearray: immutable/mutable byte sequences for binary data.
+This module explains how to use the `range()` function to generate sequences of numbers.
 
-- Range (`range`): efficient immutable sequence of integers commonly used in loops.
+- **Notes:** [Range](./Python_Learning/008-Range/range.md)
+- **Code:** [Range Example](./Python_Learning/008-Range/range.py)
 
-Collections module (specialized structures)
+### 9. Continue and Break
 
-- `deque`: double-ended queue for fast appends/pops from both ends (O(1)).
-- `defaultdict`: dict subclass that provides default values for missing keys.
-- `Counter`: multiset for counting hashable items.
-- `namedtuple`: lightweight tuple with named fields.
-- `OrderedDict`: (mostly historical) preserves insertion order — built-in dict now does this.
+This module covers the `continue` and `break` statements to control the flow within loops.
 
-Array & heap utilities: `array.array`, `heapq`, `bisect`.
+- **Notes:** [Continue & Break](./Python_Learning/009-Conti&Break/Conti&Br.md)
+- **Code:** [Continue & Break Example](./Python_Learning/009-Conti&Break/Conti&Br.py)
 
-Key topics to learn and exercises are included in the original notes.
+### 10. Error Handling (Try-Except)
 
----
+This module introduces `try` and `except` blocks for handling exceptions and errors in your code.
 
-## Comments, Escape Sequences, Print, Input, and Variables — Notes
+- **Notes:** [Try-Except](./Python_Learning/010-TRY_Except/TryExcept.md)
+- **Code:** [Try-Except Example](./Python_Learning/010-TRY_Except/TryExcept.py)
 
-Comments
+### 11. Operators
 
-- Single-line comment: start with `#`.
-- Multi-line / docstring style: use triple quotes `""" ... """` (commonly used for docstrings).
+This module provides an overview of the various operators in Python, such as arithmetic, comparison, and logical operators.
 
-Escape sequences
+- **Notes:** [Operators](./Python_Learning/011-Operator/OP.md)
+- **Code:** [Operators Example](./Python_Learning/011-Operator/OP.py)
 
-- `\n` newline
-- `\t` tab
-- `\\` backslash
-- `\'` single quote and `\"` double quote
-- Unicode escapes: `\u2764` or `\U0001F600`
-- Raw strings: prefix with `r` to ignore escapes (useful for regex and Windows paths).
+### 12. Lists
 
-print function
+This module covers lists, which are ordered and mutable collections of items.
 
-- In Python 3 `print()` is a function with `sep`, `end`, `file`, and `flush` options.
+- **Notes:** [Lists](./Python_Learning/012-List/List.md)
+- **Code:** [Lists Example](./Python_Learning/012-List/List.py)
 
-User input
+### 13. Tuples
 
-- Use `input(prompt)` to read a line of text (returns `str`). Convert types carefully and handle `ValueError` and `EOFError`.
+This module introduces tuples, which are ordered and immutable collections of items.
 
-Variables and Types
+- **Notes:** [Tuples](./Python_Learning/013-Tuples/Tuple.md)
+- **Code:** [Tuples Example](./Python_Learning/013-Tuples/Tuple.py)
 
-- Basic built-in types: `int`, `float`, `str`, `bool`, `NoneType`.
-- Use `type()` and `isinstance()` to inspect values.
+### 14. Sets
 
-Exercises and examples are in the original `All.py` and notes.
+This module covers sets, which are unordered collections of unique items.
 
----
+- **Notes:** [Sets](./Python_Learning/014-Sets/Set.md)
+- **Code:** [Sets Example](./Python_Learning/014-Sets/Set.py)
 
-*This consolidated file was generated from the repository's note files in `Python_Learning/`.*
+### 15. Match Statement
+
+This module explains the `match` statement, a structural pattern matching feature introduced in Python 3.10.
+
+- **Notes:** [Match Statement](./Python_Learning/015-Match/Match.md)
+- **Code:** [Match Statement Example](./Python_Learning/015-Match/Match.py)
+
+### 16. Dictionaries
+
+This module covers dictionaries, which are unordered collections of key-value pairs.
+
+- **Notes:** [Dictionaries](./Python_Learning/016-Dictionaries/Dics.md)
+- **Code:** [Dictionaries Example](./Python_Learning/016-Dictionaries/Dics.py)
+
+### 17. Date and Time
+
+This module explains how to work with dates and times in Python.
+
+- **Notes:** [Date and Time](./Python_Learning/017-Date/Date.md)
+- **Code:** [Date and Time Example](./Python_Learning/017-Date/Date.py)
+
+### 18. Modules
+
+This module provides a more in-depth look at creating and using modules.
+
+- **Notes:** [Modules](./Python_Learning/018-Modules/Module.md)
+- **Code:** [Modules Example](./Python_Learning/018-Modules/Module.py)
+- **Package:** [my_package](./Python_Learning/018-Modules/my_package/)
+
+### 19. Pass Statement
+
+This module explains the use of the `pass` statement as a placeholder.
+
+- **Notes:** [Pass Statement](./Python_Learning/019-Pass/Pass.md)
+- **Code:** [Pass Statement Example](./Python_Learning/019-Pass/Pass.py)
