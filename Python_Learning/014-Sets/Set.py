@@ -33,6 +33,24 @@ def examples():
 	popped = deduped.pop()
 	print("popped element:", popped)
 
+	# Loop sets
+	print("Looping through a set:")
+	for item in a:
+		print(item)
+
+	# Join sets
+	c = a.union(b)
+	print("a.union(b):", c)
+	d = set(a)
+	d.update(b)
+	print("a after update(b):", d)
+
+	# Copy sets
+	a_copy_method = a.copy()
+	a_copy_constructor = set(a)
+	print("a_copy_method:", a_copy_method)
+	print("a_copy_constructor:", a_copy_constructor)
+
 	# Set algebra
 	print("union a|b:", a | b)
 	print("intersection a&b:", a & b)
